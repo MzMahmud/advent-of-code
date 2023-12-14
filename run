@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ./src/$1/day-$2
+ts-node main.ts
