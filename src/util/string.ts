@@ -11,3 +11,11 @@ export function charCode(char: string) {
 export function isDigit(char: string) {
     return /[0-9]/.test(char);
 }
+
+export function isEmpty(s: string) {
+    return s.length === 0;
+}
+
+export function isNonEmpty(s: string) {
+    return s.length > 0;
+}
