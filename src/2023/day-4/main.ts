@@ -11,10 +11,10 @@ console.warn({ partTwoAnswer });
 
 function getPartOneAnswer(cardInputs: string[]) {
     return cardInputs
-        .map(parseInput)
-        .map(({ winningCards, ownCards }) =>
-            calculatePoints(winningCards, ownCards)
-        )
+        .map((cardInput) => {
+            const { winningCards, ownCards } = parseInput(cardInput);
+            return calculatePoints(winningCards, ownCards);
+        })
         .reduce(...summing());
 }
 
