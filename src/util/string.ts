@@ -4,6 +4,10 @@ export function readLines(path: string): string[] {
     return readFileSync(path, "utf8").split("\n");
 }
 
+export function readFile(path: string): string {
+    return readFileSync(path, "utf8");
+}
+
 export function charCode(char: string) {
     return char.charCodeAt(0);
 }
